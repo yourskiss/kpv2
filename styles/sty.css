@@ -75,9 +75,10 @@ body { margin: 0; padding:0; box-sizing: border-box; line-height: 1.2; font-size
 
 .pg_field_select { width: 100%;  padding:0.7rem 1rem; float: left; background: #FFFFFF; border: 2px solid #043D45; border-radius: 5px; }
 .pg_field_select aside { width: 100%; display: flex; justify-content: space-between; align-items: center; cursor: pointer; }
-.pg_field_select aside span { display: flex;justify-content: flex-start;align-items: center; text-align: left;  font-family: 'Rubik', sans-serif; font-weight:500; font-size: 16px; color: #c3c3c3; }
-.pg_field_select aside span img { display: inline-block; width:45px; margin-right: 10px; border: solid 1px #ddd; border-radius: 5px; }
-.pg_field_select aside span b { display: inline-block; color:#043D45;   }
+.pg_field_select aside span { display: flex;justify-content: flex-start;align-items: center; text-align: left; }
+.pg_field_select aside span em { display: inline-block; font-family: 'Rubik', sans-serif; font-weight:500; font-size: 16px; color: #c3c3c3; font-style: normal; }
+.pg_field_select aside span img { display:none; width:45px; margin-right: 10px; border: solid 1px #ddd; border-radius: 5px; }
+.pg_field_select aside span b { display: none; color:#043D45; font-family: 'Rubik', sans-serif; font-weight:500; font-size: 16px;  00 font-style: normal;  }
 .pg_field_select aside img.pg_sel_arrow { width: 16px;  }
 
 .pg_field_rang { position: relative;width: 100%; float: left;  margin-top: 1rem; padding-top: 2rem;  }
@@ -104,10 +105,10 @@ body { margin: 0; padding:0; box-sizing: border-box; line-height: 1.2; font-size
 
 
 /* ################### charitypage ################### */
-.charitypage {   width: 100%; min-height: 100vh;  padding:0; float: left;  }
+.charitypage { display: none; position: absolute; top: 0;left: 0;z-index: 2; width: 100%; min-height: 100%;  padding:0; float: left; background: #fff;  }
 
 /* charity back btn */
-.cr_back_btn {width: 100%;padding: 1rem;margin: 0; float: left; text-align: center; background: #FFFFFF; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.12);  }
+.cr_back_btn { z-index: 3; position: fixed; left: 0;right: 0;top: 0; width: 100%;max-width: 1024px;padding: 1rem; margin: 0 auto; float: none; text-align: center; background: #FFFFFF; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.12); }
 .cr_back_btn img { float: left; font-size: 16px; cursor: pointer; }
 .cr_back_btn img:hover { filter: invert(1);  }
 .cr_back_btn span {  font-family:'Libre Caslon Text', serif; line-height: 1; font-weight: 700; font-size: 20px; color:#043D45; }
@@ -115,7 +116,7 @@ body { margin: 0; padding:0; box-sizing: border-box; line-height: 1.2; font-size
 .cr_back_btn i.fa.fa-arrow-left:hover { color: #e03d8c; transition: all 0.3s ease-in;  }
  
 /* charity Container */
-.cr_container { width: 100%; padding:1rem; margin-top: 1rem; float: left;  }
+.cr_container { width: 100%; padding:1rem; margin-top: 60px; float: left;  }
 .cr_container ul {  width: 100%; float: left; display: flex; justify-content:space-evenly; align-items: self-start;flex-wrap: wrap; }
 .cr_container ul li { list-style: none; width: 44%; margin:0.6rem 0; cursor: pointer; }
 .cr_container ul li aside { clear: both; display: inline-block; padding: 2px; width: 160px; max-width: 100%; float: none;  border:1px solid rgba(0, 0, 0, 0.2); box-sizing: border-box; border-radius:8px; transition: all 0.3s ease-out; }
@@ -124,8 +125,12 @@ body { margin: 0; padding:0; box-sizing: border-box; line-height: 1.2; font-size
 .cr_container ul li p {  width: 100%; float: left; margin-top: 0.3rem; text-align: center; font-family:'Rubik', sans-serif; line-height: 1; font-weight:500; font-size:14px; color:#043D45; transition: all 0.3s ease-out; }
 .cr_container ul li:hover p, .cr_container ul li.active p { color:#E03D8C;  transition: all 0.3s ease-in; }
 
+
+
 /* ################### dashboardpage ################### */
-.dashboardpage {   width: 100%; min-height: 100vh;  padding:0; float: left;  background: #FFFFFF;  }
+.dashboardpage { display: none; position: absolute; top: 0;left: 0;z-index: 2; width: 100%; min-height: 100%;  padding:0; float: left;  background: #FFFFFF;  }
+
+
 
 /*  back btn */
 .dashboardpage .top_button  { margin:0 0 1rem 0;  }
@@ -171,6 +176,9 @@ body { margin: 0; padding:0; box-sizing: border-box; line-height: 1.2; font-size
 .dp_yourcharity ul li:hover p {color:#e03d8c;  transition: all 0.3s ease-in;   }
  
 
+
+/* ################### dashboardhighlights ################### */
+.dashboardhighlights { display: none; position: absolute; top: 0;left: 0;z-index: 2; width: 100%; min-height: 100%;  padding:0; float: left;  background: #FFFFFF;  }
 
 /* keyhighlights */
 .dp_keyhighlights { width: 100%; padding:2rem 1rem 0 1rem; float: left; }
@@ -231,8 +239,9 @@ body { margin: 0; padding:0; box-sizing: border-box; line-height: 1.2; font-size
 .dp_sharecode aside img { width: 25px; margin-right: 0.6rem; }
 
 
+
 /* ################### influencerprogram ################### */
-.influencerprogram {   width: 100%; min-height: 100vh;  float: left;  background: #FFFFFF;  }
+.influencerprogram { display: none; position: absolute; top: 0;left: 0;z-index: 2; width: 100%; min-height:100%;  float: left;  background: #FFFFFF;  }
 
 /* influencerPicture */
 .influencerPicture { position: relative; width: 100%; margin:0; float: left; }
@@ -268,9 +277,9 @@ body { margin: 0; padding:0; box-sizing: border-box; line-height: 1.2; font-size
 
 
 /* ################### realinfluencer ################### */
-.realinfluencer { width: 100%;float: left; background: #000; background: rgba(0,0,0,0.5);  }
-.realinf_container { width: 100%;  min-height: 100vh;  float: left;  display: flex; justify-content: center; align-items: flex-end;  }
-.realinf_inner { width: 100%; float: left; padding:1rem;  min-height: 65vh; margin: 35vh 0 0 0; background: #fff; border-radius: 8px 8px 0 0; }
+.realinfluencer { display: none; position: absolute; top: 0;left: 0;z-index: 2; width: 100%; height: 100%; float: left; background: #000; background: rgba(0,0,0,0.5);  }
+.realinf_container { width: 100%;  height: 100%;  float: left;  display: flex; justify-content: center; align-items: flex-end;  }
+.realinf_inner { width: 100%; float: left; padding:1rem;  background: #fff; border-radius: 8px 8px 0 0; }
 
 .realinf_poster { position: relative; width: 90%; padding:0; margin:-100px 5% 0 5%; float: left; }
 .realinf_poster img { width: 100%; }

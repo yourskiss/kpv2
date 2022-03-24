@@ -14,12 +14,12 @@
 </head>
 <body>
 <!-- main start -->
-<div class="mainWrapper">
+<div class="mainWrapper" id="mainDiv">
 <div class="mainContainer">
 
 
 <!-- ########################## programpage start ########################## -->
-<div class="programpage">
+<div class="programpage" id="programSection">
 
 	<!-- back button start -->
 	<div class="top_button">
@@ -32,7 +32,7 @@
 	<div class="welcome_text" >
 		<h2>Welcome Shiv </h2>
 		<h3>to the Karma Points Influencer Program. 
-			<span><i class="fa fa-info" aria-hidden="true"></i></span>
+			<span onclick="influencerShowHide(1)"><i class="fa fa-info" aria-hidden="true"></i></span>
 		</h3>
 		<p>Following details will help us setup your dashboard & start contributions to your favourite charity.</p>
 	</div>
@@ -64,38 +64,15 @@
 		</div>
 
 
-		<!-- normal case -->
-		<div class="pg_field" >
-			<label>Charity</label>
-			<div class="pg_field_select">
-				<aside>
-					<span>Select Charity</span> 
-					<img class="pg_sel_arrow" src="images/arrow_right_blue.png" alt="share now" />
-				</aside>
-			</div>
-			<span class="pg_field_msg">Select Charity</span>
-		</div>
 
-		<!-- error case = error display block -->	
 		<div class="pg_field" >
 			<label>Charity</label>
 			<div class="pg_field_select">
-				<aside>
-					<span>Select Charity</span> 
-					<img class="pg_sel_arrow" src="images/arrow_right_blue.png" alt="share now" />
-				</aside>
-			</div>
-			<span class="pg_field_msg" style="display: block;">Select Charity</span>
-		</div>
-
-		<!-- selection case  -->	
-		<div class="pg_field" >
-			<label>Charity</label>
-			<div class="pg_field_select">
-				<aside>
+				<aside onclick="charityShowHide(1)">
 					<span>
-						<img src="images/ngo1.png" alt="Charity" />
-						<b>Goonj</b>
+						<em id="charity_demytext">Select Charity</em>
+						<img id="charity_picture" style="display: none;" src="" alt="Charity" />
+						<b id="charity_title" style="display: none;"></b>
 					</span> 
 					<img class="pg_sel_arrow" src="images/arrow_right_blue.png" alt="share now" />
 				</aside>
@@ -119,7 +96,7 @@
 	
 	<!-- genratecode start -->
 	<div class="pg_genratecode" >
-		<aside>
+		<aside onclick="dashboardShowHide(1)">
 			<span>Generate Code</span> 
 			<img src="images/arrow_white.png" alt="share now" />
 		</aside>
@@ -139,7 +116,7 @@
 	<!-- back button start -->
 	<div class="cr_back_btn" >
 		<!-- <img src="images/arrow_left_blue.png" alt="back"> -->
-		<i class="fa fa-arrow-left" aria-hidden="true"></i>
+		<i onclick="charityShowHide(0)" class="fa fa-arrow-left" aria-hidden="true"></i>
 		<span>Select Charity</span>
 	</div>
 	<!-- back button end -->
@@ -148,40 +125,44 @@
 	<!--  container start -->
 	<div class="cr_container" >
 		<ul>
-			<li>
+			<li onclick="charitySelect('images/ngo1.png','Goonj')">
 				<aside><img src="images/ngo1.png" alt="ngo" /></aside>
 				<p>Goonj</p>
 			</li>
-			<li>
+			<li onclick="charitySelect('images/ngo2.png','The Growing')">
 				<aside><img src="images/ngo2.png" alt="ngo" /></aside>
 				<p>The Growing</p>
 			</li>
-			<li>
+			<li onclick="charitySelect('images/ngo1.png','Goonj')">
 				<aside><img src="images/ngo1.png" alt="ngo" /></aside>
 				<p>Goonj</p>
 			</li>
-			<li>
+			<li onclick="charitySelect('images/ngo2.png','The Growing')">
 				<aside><img src="images/ngo2.png" alt="ngo" /></aside>
 				<p>The Growing</p>
 			</li>
-			<li>
+			<li onclick="charitySelect('images/ngo1.png','Goonj')">
 				<aside><img src="images/ngo1.png" alt="ngo" /></aside>
 				<p>Goonj</p>
 			</li>
-			<li>
+			<li onclick="charitySelect('images/ngo2.png','The Growing')">
 				<aside><img src="images/ngo2.png" alt="ngo" /></aside>
 				<p>The Growing</p>
 			</li>
-			<li>
+			<li onclick="charitySelect('images/ngo1.png','Goonj')">
 				<aside><img src="images/ngo1.png" alt="ngo" /></aside>
 				<p>Goonj</p>
 			</li>
-			<li>
+			<li onclick="charitySelect('images/ngo2.png','The Growing')">
 				<aside><img src="images/ngo2.png" alt="ngo" /></aside>
 				<p>The Growing</p>
 			</li>
-			<li>
+			<li onclick="charitySelect('images/ngo1.png','Goonj')">
 				<aside><img src="images/ngo1.png" alt="ngo" /></aside>
+				<p>Goonj</p>
+			</li>
+			<li onclick="charitySelect('images/ngo2.png','The Growing')">
+				<aside><img src="images/ngo2.png" alt="ngo" /></aside>
 				<p>The Growing</p>
 			</li>
 		</ul>
@@ -195,11 +176,11 @@
 
 
 <!-- ########################## dashboardpage start ########################## -->
-<div class="dashboardpage" id="dashboardSection1">
+<div class="dashboardpage" id="dashboardMain">
  
 	<!-- back button start -->
 	<div class="top_button" >
-		<i class="fa fa-times" aria-hidden="true"></i>
+		<i onclick="dashboardShowHide(0)" class="fa fa-times" aria-hidden="true"></i>
 	</div>
 	<!-- back button end -->
 
@@ -257,13 +238,13 @@
 		<section>
 			<h2>Your Charity</h2>
 			<ul>
-				<li>
+				<li onclick="keyhighlightShowHide(1)">
 					<img src="images/ngo1.png" alt="ngo" />
 					<p>Goonj some random</p>
 				</li>
-				<li>
+				<li onclick="keyhighlightShowHide(1)">
 					<img src="images/ngo2.png" alt="ngo" />
-					<p>Goonj some random</p>
+					<p>The Growing random</p>
 				</li>
 			</ul>
 		</section>
@@ -374,7 +355,7 @@
 	  
 	<!--  sharecode start -->
 	<div class="dp_sharecode">
-			<aside>
+			<aside onclick="generatecodeShowHide(1)">
 				<img src="images/share.png" alt="share" />
 				<span>Share Code</span>
 			</aside>
@@ -390,12 +371,12 @@
 
 
 
-<!-- ########################## dashboardpage start ########################## -->
-<div class="dashboardpage" id="dashboardSection2">
+<!-- ########################## dashboardhighlights start ########################## -->
+<div class="dashboardhighlights" id="dashboardhighlights">
  
 	<!-- back button start -->
 	<div class="top_button" >
-		<i class="fa fa-times" aria-hidden="true"></i>
+		<i onclick="keyhighlightShowHide(0)" class="fa fa-times" aria-hidden="true"></i>
 	</div>
 	<!-- back button end -->
 
@@ -521,14 +502,14 @@
 					<span class="share_tw"><i class="fa fa-twitter" aria-hidden="true"></i></span>
 				</li>
 			</ul>
-			<aside>Lets do it again</aside>
+			<aside onclick="restartJourney()">Lets do it again</aside>
 		</section>
 	</div>
 	<!-- sharenow end -->
 
 
 </div>
-<!-- ########################## dashboardpage end ########################## -->
+<!-- ########################## dashboardhighlights end ########################## -->
 
 
 
@@ -536,11 +517,11 @@
 
 
 <!-- ########################## influencerprogram start ########################## -->
-<div class="influencerprogram" id="influencerSection">
+<div class="influencerprogram" id="influencerprogramSection">
  
 	<!-- influencerPicture start -->
 	<div class="influencerPicture">
-		<span class="influencerBackBtn"><i class="fa fa-times" aria-hidden="true"></i></span>
+		<span class="influencerBackBtn" onclick="influencerShowHide(0)"><i class="fa fa-times" aria-hidden="true"></i></span>
 		<img src="images/influencer-picture.png" alt="avtar" />
 	</div>
 	<!-- influencerPicture end -->
@@ -629,13 +610,13 @@
 
 
 <!-- ########################## realinfluencer start ########################## -->
-<div class="realinfluencer" id="realinfluencerSection">
+<div class="realinfluencer" id="generatedcodeSection">
 <div class="realinf_container">
 <div class="realinf_inner">
 
 		<!-- poster start -->
 		<div class="realinf_poster">
-			<span class="realinf_BackBtn"><i class="fa fa-times" aria-hidden="true"></i></span>
+			<span class="realinf_BackBtn" onclick="generatecodeShowHide(0)"><i class="fa fa-times" aria-hidden="true"></i></span>
 			<img src="images/happy-dance.png" alt="poster" />
 		</div>
 		<!-- poster end -->
@@ -674,7 +655,7 @@
 						<span class="share_tw"><i class="fa fa-twitter" aria-hidden="true"></i></span>
 					</li>
 				</ul>
-				<aside>Lets do it again</aside>
+				<aside onclick="restartJourney()">Lets do it again</aside>
 			</section>
 		</div>
 		<!-- sharenow end -->
@@ -712,6 +693,100 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
 
 <script>
+function restartJourney()
+{
+	$("#dashboardMain").fadeOut(300);
+	$("#dashboardhighlights").fadeOut(300);
+	$("#generatedcodeSection").fadeOut(300);
+	$("#mainDiv").css("overflow","visible");
+}
+	
+function dashboardShowHide(val)
+{
+	if(val == 0)
+	{
+		$("#dashboardMain").fadeOut(300);
+	}
+	else if(val == 1)
+	{
+		$("#dashboardMain").fadeIn(300);
+		$(".stats_slider .slick-dots li").eq(0).trigger("click");
+	}
+	else
+	{
+		// nothing
+	}
+}	
+function keyhighlightShowHide(val)
+{
+	if(val == 0)
+	{
+		$("#dashboardhighlights").fadeOut(300);
+	}
+	else if(val == 1)
+	{
+		$("#dashboardhighlights").fadeIn(300);
+	}
+	else
+	{
+		// nothing
+	}
+}
+function generatecodeShowHide(val)
+{
+	if(val == 0)
+	{
+		$("#mainDiv").css("overflow","visible");
+		$("#generatedcodeSection").fadeOut(300);
+	}
+	else if(val == 1)
+	{
+		$("#mainDiv").css("overflow","hidden");
+		$("#generatedcodeSection").fadeIn(300);
+	}
+	else
+	{
+		// nothing
+	}
+}
+function influencerShowHide(val)
+{
+	if(val == 0)
+	{
+		$("#influencerprogramSection").fadeOut(300);
+	}
+	else if(val == 1)
+	{
+		$("#influencerprogramSection").fadeIn(300);
+	}
+	else
+	{
+		// nothing
+	}
+}
+function charityShowHide(val)
+{
+	if(val == 0)
+	{
+		$("#charitySection").fadeOut(300);
+	}
+	else if(val == 1)
+	{
+		$("#charitySection").fadeIn(300);
+	}
+	else
+	{
+		// nothing
+	}
+}
+function charitySelect(v1, v2)
+{
+	charityShowHide(0);
+	$("#charity_demytext").hide();
+	$("#charity_picture").show().attr('src',v1);
+	$("#charity_title").show().text(v2);
+}
+
 
 /* range slider form amount === start */
 $("#amountRange").slider({
