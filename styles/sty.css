@@ -337,7 +337,7 @@ body {  background: #ccc; margin: 0; padding:0; box-sizing: border-box; line-hei
 }
 
 
-@media screen and (min-device-width: 480px) and (max-device-width: 1624px) and (orientation : landscape)
+@media screen and (min-device-width: 480px) and (max-device-width: 1024px) and (orientation : landscape)
 {
-    .realinf_poster { margin-top:-180px; }
+ 
 }
