@@ -15,9 +15,7 @@
 <body>
 <!-- main start -->
 <div class="mainWrapper" id="mainDiv">
-<div class="mainContainer">
-
-
+ 
 <!-- ########################## programpage start ########################## -->
 <div class="programpage" id="programSection">
 
@@ -669,7 +667,7 @@
 
 
 
-</div>
+ 
 </div>
 <!-- main end -->
 
@@ -698,7 +696,7 @@ function restartJourney()
 	$("#dashboardMain").fadeOut(300);
 	$("#dashboardhighlights").fadeOut(300);
 	$("#generatedcodeSection").fadeOut(300);
-	$("#mainDiv").css("overflow","visible");
+	// $("#mainDiv").css("overflow","visible");
 }
 	
 function dashboardShowHide(val)
@@ -736,13 +734,15 @@ function generatecodeShowHide(val)
 {
 	if(val == 0)
 	{
-		$("#mainDiv").css("overflow","visible");
+		// $("#mainDiv").css("overflow","visible");
 		$("#generatedcodeSection").fadeOut(300);
+		$("#dashboardMain").fadeIn(300); 
 	}
 	else if(val == 1)
 	{
-		$("#mainDiv").css("overflow","hidden");
-		$("#generatedcodeSection").fadeIn(300);
+		// $("#mainDiv").css("overflow","hidden");
+		$("#generatedcodeSection").css('display','flex');
+		$("#dashboardMain").fadeOut(300); 
 	}
 	else
 	{
