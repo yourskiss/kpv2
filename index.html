@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0" />
+
+	<title>Karma Points</title>
+
+	<link rel="stylesheet" href="styles/sty.css" />
+	<link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.0/themes/smoothness/jquery-ui.css" />
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" />
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" />
+
+</head>
+<body>
+<!-- main start -->
+<div class="mainWrapper">
+<div class="mainContainer">
+
+
+<!-- ########################## programpage start ########################## -->
+<div class="programpage">
+
+	<!-- back button start -->
+	<div class="top_button">
+		<i class="fa fa-arrow-left" aria-hidden="true"></i>
+	</div>
+	<!-- back button end -->
+
+
+	<!-- welcome text start -->
+	<div class="welcome_text" >
+		<h2>Welcome Shiv </h2>
+		<h3>to the Karma Points Influencer Program. 
+			<span><i class="fa fa-info" aria-hidden="true"></i></span>
+		</h3>
+		<p>Following details will help us setup your dashboard & start contributions to your favourite charity.</p>
+	</div>
+	<!-- welcome text  end -->
+
+
+	<!-- form start -->
+	<div class="pg_formfield" >
+
+		<!-- normal case -->
+		<div class="pg_field" >
+			<label>Profile Name </label>
+			<input class="pg_field_input" type="text" placeholder="Enter Profile Name" />
+			<span class="pg_field_msg">Choose Profile Name</span>
+		</div>
+
+		<!-- error case == adde "pg_field_error" class  in parent div  -->
+		<div class="pg_field pg_field_error">
+			<label>Profile Name </label>
+			<input class="pg_field_input" type="text" placeholder="Enter Profile Name" />
+			<span class="pg_field_msg">User name not found</span>
+		</div>
+
+		<!-- success case == adde "pg_field_success" class in parent div  -->
+		<div class="pg_field pg_field_success">
+			<label>Profile Name </label>
+			<input class="pg_field_input" type="text" placeholder="Enter Profile Name" />
+			<span class="pg_field_msg">Successfully added</span>
+		</div>
+
+
+		<!-- normal case -->
+		<div class="pg_field" >
+			<label>Charity</label>
+			<div class="pg_field_select">
+				<aside>
+					<span>Select Charity</span> 
+					<img class="pg_sel_arrow" src="images/arrow_right_blue.png" alt="share now" />
+				</aside>
+			</div>
+			<span class="pg_field_msg">Select Charity</span>
+		</div>
+
+		<!-- error case = error display block -->	
+		<div class="pg_field" >
+			<label>Charity</label>
+			<div class="pg_field_select">
+				<aside>
+					<span>Select Charity</span> 
+					<img class="pg_sel_arrow" src="images/arrow_right_blue.png" alt="share now" />
+				</aside>
+			</div>
+			<span class="pg_field_msg" style="display: block;">Select Charity</span>
+		</div>
+
+		<!-- selection case  -->	
+		<div class="pg_field" >
+			<label>Charity</label>
+			<div class="pg_field_select">
+				<aside>
+					<span>
+						<img src="images/ngo1.png" alt="Charity" />
+						<b>Goonj</b>
+					</span> 
+					<img class="pg_sel_arrow" src="images/arrow_right_blue.png" alt="share now" />
+				</aside>
+			</div>
+			<span class="pg_field_msg">Select Charity</span>
+		</div>
+
+
+		<div class="pg_field" >
+			<label>Select amount to be raised</label>
+			<div class="pg_field_rang">
+				<aside id="amountRange"><em>Slide for set amount</em></aside>
+				<input type="hidden" id="amountValueRange" />
+			</div>
+			<span class="pg_field_msg">Select the Amount</span>
+		</div>
+
+	</div>
+	<!-- form  end -->
+
+	
+	<!-- genratecode start -->
+	<div class="pg_genratecode" >
+		<aside>
+			<span>Generate Code</span> 
+			<img src="images/arrow_white.png" alt="share now" />
+		</aside>
+	</div>
+	<!-- genratecode end -->
+ 
+
+</div>
+<!-- ########################## programpage end ########################## -->
+
+
+
+
+<!-- ########################## charitypage start ########################## -->
+<div class="charitypage" id="charitySection">
+ 
+	<!-- back button start -->
+	<div class="cr_back_btn" >
+		<!-- <img src="images/arrow_left_blue.png" alt="back"> -->
+		<i class="fa fa-arrow-left" aria-hidden="true"></i>
+		<span>Select Charity</span>
+	</div>
+	<!-- back button end -->
+
+
+	<!--  container start -->
+	<div class="cr_container" >
+		<ul>
+			<li>
+				<aside><img src="images/ngo1.png" alt="ngo" /></aside>
+				<p>Goonj</p>
+			</li>
+			<li>
+				<aside><img src="images/ngo2.png" alt="ngo" /></aside>
+				<p>The Growing</p>
+			</li>
+			<li>
+				<aside><img src="images/ngo1.png" alt="ngo" /></aside>
+				<p>Goonj</p>
+			</li>
+			<li>
+				<aside><img src="images/ngo2.png" alt="ngo" /></aside>
+				<p>The Growing</p>
+			</li>
+			<li>
+				<aside><img src="images/ngo1.png" alt="ngo" /></aside>
+				<p>Goonj</p>
+			</li>
+			<li>
+				<aside><img src="images/ngo2.png" alt="ngo" /></aside>
+				<p>The Growing</p>
+			</li>
+			<li>
+				<aside><img src="images/ngo1.png" alt="ngo" /></aside>
+				<p>Goonj</p>
+			</li>
+			<li>
+				<aside><img src="images/ngo2.png" alt="ngo" /></aside>
+				<p>The Growing</p>
+			</li>
+			<li>
+				<aside><img src="images/ngo1.png" alt="ngo" /></aside>
+				<p>The Growing</p>
+			</li>
+		</ul>
+	</div>
+	<!-- container end -->
+	
+
+</div>
+<!-- ########################## charitypage end ########################## -->
+
+
+
+<!-- ########################## dashboardpage start ########################## -->
+<div class="dashboardpage" id="dashboardSection1">
+ 
+	<!-- back button start -->
+	<div class="top_button" >
+		<i class="fa fa-times" aria-hidden="true"></i>
+	</div>
+	<!-- back button end -->
+
+
+	<!-- profile info start -->
+	<div class="profile_info">
+			<aside>
+				<img src="images/avtar.png" alt="avtar" />
+				<span><i class="fa fa-star" aria-hidden="true"></i></span>
+			</aside>
+			<h2>Hello Shiv Kumar Sharma</h2>
+			<p>This is where you see progress &#128640;</p>
+	</div>
+	<!-- profile info end -->
+
+	
+
+	<!-- targetamount start -->
+	<div class="dp_targetamount">
+		<section>
+			<h2><i class="fa fa-inr" aria-hidden="true"></i>1,00,000</h2>
+			<h3>Target Amount</h3>
+			<ul>
+				<li><b>Your Code</b></li>
+				<li onclick="copycode('#copytext1')"><span id="copytext1">BPKP2023</span><i class="fa fa-clone" aria-hidden="true"></i></li>
+			</ul>
+		</section>
+	</div>
+	<!-- targetamount end -->
+
+
+	<!-- raisedamount start -->
+	<div class="dp_raisedamount">
+		<section>
+			<ul>
+				<li>
+					<h2><i class="fa fa-inr" aria-hidden="true"></i>82k Raised</h2>
+					<h3>Updated today at 7 am</h3>
+				</li>
+				<li>
+					<aside>
+						<span>82</span>
+						<i class="fa fa-percent" aria-hidden="true"></i>
+					</aside>
+				</li>
+			</ul>
+		</section>
+	</div>
+	<!-- raisedamount end -->
+
+
+
+	<!-- yourcharity start -->
+	<div class="dp_yourcharity">
+		<section>
+			<h2>Your Charity</h2>
+			<ul>
+				<li>
+					<img src="images/ngo1.png" alt="ngo" />
+					<p>Goonj some random</p>
+				</li>
+				<li>
+					<img src="images/ngo2.png" alt="ngo" />
+					<p>Goonj some random</p>
+				</li>
+			</ul>
+		</section>
+	</div>
+	<!-- yourcharity end -->
+
+
+	<!--  Stats tabs start -->
+	<div class="dp_statstabs">
+		<ul>
+			<li data-name="DailyStats" class="dp_statstabs_li_active"><span>Daily Stats</span></li>
+			<li data-name="WeeklyStats"><span>Weekly Stats</span></li>
+		</ul>
+		<section data-id="DailyStats" style="display: block;">
+			<div id="stats_daily" class="stats_slider">
+					<div class="item">
+						<aside>
+							<img src="images/icon_amount_raised.png" alt="stats" />
+						</aside>
+						<h2><i class="fa fa-inr" aria-hidden="true"></i>33,000</h2>
+						<p>Amount Raised</p>
+					</div>
+					<div class="item">
+						<aside>
+							<img src="images/icon_donations.png" alt="stats" />
+						</aside>
+						<h2>82</h2>
+						<p>No. of donations</p>
+					</div>
+					<div class="item">
+						<aside>
+							<img src="images/icon_donation_growth.png" alt="stats" />
+						</aside>
+						<h2>+22.7%</h2>
+						<p>Donation growth</p>
+					</div>
+					<div class="item">
+						<aside>
+							<img src="images/icon_amount_raised.png" alt="stats" />
+						</aside>
+						<h2><i class="fa fa-inr" aria-hidden="true"></i>33,000</h2>
+						<p>Amount Raised</p>
+					</div>
+					<div class="item">
+						<aside>
+							<img src="images/icon_donations.png" alt="stats" />
+						</aside>
+						<h2>82</h2>
+						<p>No. of donations</p>
+					</div>
+					<div class="item">
+						<aside>
+							<img src="images/icon_donation_growth.png" alt="stats" />
+						</aside>
+						<h2>+22.7%</h2>
+						<p>Donation growth</p>
+					</div>
+			</div>
+		</section>
+		<section data-id="WeeklyStats">
+			<div id="stats_weekly" class="stats_slider">
+					<div class="item">
+						<aside>
+							<img src="images/icon_amount_raised.png" alt="stats" />
+						</aside>
+						<h2><i class="fa fa-inr" aria-hidden="true"></i>66,000</h2>
+						<p>Amount Raised</p>
+					</div>
+					<div class="item">
+						<aside>
+							<img src="images/icon_donations.png" alt="stats" />
+						</aside>
+						<h2>345</h2>
+						<p>No. of donations</p>
+					</div>
+					<div class="item">
+						<aside>
+							<img src="images/icon_donation_growth.png" alt="stats" />
+						</aside>
+						<h2>+56.1%</h2>
+						<p>Donation growth</p>
+					</div>
+					<div class="item">
+						<aside>
+							<img src="images/icon_amount_raised.png" alt="stats" />
+						</aside>
+						<h2><i class="fa fa-inr" aria-hidden="true"></i>99,230</h2>
+						<p>Amount Raised</p>
+					</div>
+					<div class="item">
+						<aside>
+							<img src="images/icon_donations.png" alt="stats" />
+						</aside>
+						<h2>789</h2>
+						<p>No. of donations</p>
+					</div>
+					<div class="item">
+						<aside>
+							<img src="images/icon_donation_growth.png" alt="stats" />
+						</aside>
+						<h2>+67.1%</h2>
+						<p>Donation growth</p>
+					</div>
+			</div>
+	   </section>
+	  </div>
+	  <!-- Stats tabs end -->
+	  
+	<!--  sharecode start -->
+	<div class="dp_sharecode">
+			<aside>
+				<img src="images/share.png" alt="share" />
+				<span>Share Code</span>
+			</aside>
+	</div>
+	<!-- sharecode end -->
+  
+</div>
+<!-- ########################## dashboardpage end ########################## -->
+
+
+
+
+
+
+
+<!-- ########################## dashboardpage start ########################## -->
+<div class="dashboardpage" id="dashboardSection2">
+ 
+	<!-- back button start -->
+	<div class="top_button" >
+		<i class="fa fa-times" aria-hidden="true"></i>
+	</div>
+	<!-- back button end -->
+
+
+	<!-- profile info start -->
+	<div class="profile_info">
+			<aside>
+				<img src="images/avtar.png" alt="avtar" />
+				<span><i class="fa fa-star" aria-hidden="true"></i></span>
+			</aside>
+			<h3>Congratulations Shiv </h3>
+			<h4>
+				With your efforts, we have successfully raised 
+				<b><i class="fa fa-inr" aria-hidden="true"></i>1,00,000</b> for different goals.
+				<span><i class="fa fa-info" aria-hidden="true"></i></span>
+			</h4>
+			<p>As promised, we are making the following donation in your name!</p>
+	</div>
+	<!-- profile info end -->
+
+	<!-- targetamount start -->
+	<div class="dp_targetamount">
+		<section>
+			<h2><i class="fa fa-inr" aria-hidden="true"></i>1,00,000</h2>
+			<h3>Target Amount</h3>
+			<ul>
+				<li><b>Your Code</b></li>
+				<li onclick="copycode('#copytext2')"><span id="copytext2">BPKP2021</span><i class="fa fa-clone" aria-hidden="true"></i></li>
+			</ul>
+		</section>
+	</div>
+	<!-- targetamount end -->
+
+	<!-- raisedamount start -->
+	<div class="dp_raisedamount">
+		<section>
+			<p><i class="fa fa-inr" aria-hidden="true"></i>1L Raised</p>
+		</section>
+	</div>
+	<!-- raisedamount end -->
+
+
+	<!-- yourcharity start -->
+	<div class="dp_yourcharity">
+		<section>
+			<h2>Your Charity</h2>
+			<ul>
+				<li>
+					<img src="images/ngo1.png" alt="ngo" />
+					<p>Goonj some random</p>
+				</li>
+				<li>
+					<img src="images/ngo2.png" alt="ngo" />
+					<p>Goonj some random</p>
+				</li>
+			</ul>
+		</section>
+	</div>
+	<!-- yourcharity end -->
+
+	<!-- keyhighlights start -->
+	<div class="dp_keyhighlights">
+		<section>
+			<h2>Key highlights</h2>
+			<ul>
+				<li>
+					<aside><img src="images/icon_key1.png" alt="keyhighlights" /></aside>
+					<p>
+						<b>21 days</b>
+						<span>Duration</span>
+					</p>
+				</li>
+				<li>
+					<aside><img src="images/icon_key2.png" alt="keyhighlights" /></aside>
+					<p>
+						<b>11,583</b>
+						<span>Number of donations</span>
+					</p>
+				</li>
+				<li>
+					<aside><img src="images/icon_key3.png" alt="keyhighlights" /></aside>
+					<p>
+						<b>6,29,893</b>
+						<span>Number of people helped </span>
+					</p>
+				</li>
+				<li>
+					<aside><img src="images/icon_key4.png" alt="keyhighlights" /></aside>
+					<p>
+						<b>398</b>
+						<span>Number of goals helped </span>
+					</p>
+				</li>
+				<li>
+					<aside><img src="images/icon_key5.png" alt="keyhighlights" /></aside>
+					<p>
+						<b>138</b>
+						<span>Number of charities helped </span>
+					</p>
+				</li>
+			</ul>
+		</section>
+	</div>
+	<!-- keyhighlights end -->
+
+
+
+	<!-- sharenow start -->
+	<div class="dp_sharenow">
+		<section>
+			<h2>Share now</h2>
+			<ul>
+				<li>
+					<span class="share_fb"><i class="fa fa-facebook-square" aria-hidden="true"></i></span>
+				</li>
+				<li>
+					<span class="share_ig"><i class="fa fa-instagram" aria-hidden="true"></i></span>
+				</li>
+				<li>
+					<span class="share_wa"><i class="fa fa-whatsapp" aria-hidden="true"></i></span>
+				</li>
+				<li>
+					<span class="share_tw"><i class="fa fa-twitter" aria-hidden="true"></i></span>
+				</li>
+			</ul>
+			<aside>Lets do it again</aside>
+		</section>
+	</div>
+	<!-- sharenow end -->
+
+
+</div>
+<!-- ########################## dashboardpage end ########################## -->
+
+
+
+
+
+
+<!-- ########################## influencerprogram start ########################## -->
+<div class="influencerprogram" id="influencerSection">
+ 
+	<!-- influencerPicture start -->
+	<div class="influencerPicture">
+		<span class="influencerBackBtn"><i class="fa fa-times" aria-hidden="true"></i></span>
+		<img src="images/influencer-picture.png" alt="avtar" />
+	</div>
+	<!-- influencerPicture end -->
+
+	<!-- influencerHighlights start -->
+	<div class="influencerHighlights">
+		<h2>Karma Points influencer program</h2>
+		<h3>Be a real influencer and influence change in society</h3>
+		<ul>
+			<li>
+				<aside>&#128526;</aside>
+				<p>
+					<b>Sign up for the program</b>
+					<span>Some Random Description</span>
+				</p>
+			</li>
+			<li>
+				<aside>&#127941;</aside>
+				<p>
+					<b>Select your favorite charity from our list</b>
+					<span>Some Random Description</span>
+				</p>
+			</li>
+			<li>
+				<aside>&#128519;</aside>
+				<p>
+					<b>Fix the amount you want to donate</b>
+					<span>Some Random Description</span>
+				</p>
+			</li>
+			<li>
+				<aside>&#128522;</aside>
+				<p>
+					<b>Generate your KP code and start sharing</b>
+					<span>Some Random Description</span>
+				</p>
+			</li>
+		</ul>
+	</div>
+	<!-- influencerHighlights end -->
+
+
+
+	<!-- influencerFAQs start -->
+	<div class="influencerFAQs">
+		<h2>FAQ's</h2>
+		<ul> 
+			<li class="faqactive">
+				<h3>Question</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Turpis purus turpis faucibus semper eget ut ut vel. Semper ultricies nisl, varius sapien faucibus blandit vulputate turpis vitae.</p>
+			</li>
+			<li>
+				<h3>Question</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Turpis purus turpis faucibus semper eget ut ut vel. Semper ultricies nisl, varius sapien faucibus blandit vulputate turpis vitae.</p>
+			</li>
+			<li>
+				<h3>Question</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Turpis purus turpis faucibus semper eget ut ut vel. Semper ultricies nisl, varius sapien faucibus blandit vulputate turpis vitae.</p>
+			</li>
+			<li>
+				<h3>Question</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Turpis purus turpis faucibus semper eget ut ut vel. Semper ultricies nisl, varius sapien faucibus blandit vulputate turpis vitae.</p>
+			</li>
+			<li>
+				<h3>Question</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Turpis purus turpis faucibus semper eget ut ut vel. Semper ultricies nisl, varius sapien faucibus blandit vulputate turpis vitae.</p>
+			</li>
+			<li>
+				<h3>Question</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Turpis purus turpis faucibus semper eget ut ut vel. Semper ultricies nisl, varius sapien faucibus blandit vulputate turpis vitae.</p>
+			</li>
+			<li>
+				<h3>Question</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Turpis purus turpis faucibus semper eget ut ut vel. Semper ultricies nisl, varius sapien faucibus blandit vulputate turpis vitae.</p>
+			</li>
+		</ul>
+	</div>
+	<!-- influencerFAQs end -->
+
+
+</div>
+<!-- ########################## influencerprogram end ########################## -->
+
+
+
+
+
+<!-- ########################## realinfluencer start ########################## -->
+<div class="realinfluencer" id="realinfluencerSection">
+<div class="realinf_container">
+<div class="realinf_inner">
+
+		<!-- poster start -->
+		<div class="realinf_poster">
+			<span class="realinf_BackBtn"><i class="fa fa-times" aria-hidden="true"></i></span>
+			<img src="images/happy-dance.png" alt="poster" />
+		</div>
+		<!-- poster end -->
+
+		<!-- content start -->
+		<div class="realinf_content">
+			<h2>
+				<span>Hurray!</span>
+				Woohoo! You are a real influencer
+			</h2>
+			<h3>YOUR GOODNESS CODE</h3>
+			<p>
+				<span onclick="copycode('#copytext3')">
+					<b id="copytext3">BPKP2024</b>
+					<i class="fa fa-clone" aria-hidden="true"></i>
+				</span>
+			</p>
+		</div>
+		<!-- content end -->
+
+		<!-- sharenow start -->
+		<div class="dp_sharenow">
+			<section>
+				<h2>Share now</h2>
+				<ul>
+					<li>
+						<span class="share_fb"><i class="fa fa-facebook-square" aria-hidden="true"></i></span>
+					</li>
+					<li>
+						<span class="share_ig"><i class="fa fa-instagram" aria-hidden="true"></i></span>
+					</li>
+					<li>
+						<span class="share_wa"><i class="fa fa-whatsapp" aria-hidden="true"></i></span>
+					</li>
+					<li>
+						<span class="share_tw"><i class="fa fa-twitter" aria-hidden="true"></i></span>
+					</li>
+				</ul>
+				<aside>Lets do it again</aside>
+			</section>
+		</div>
+		<!-- sharenow end -->
+
+
+</div>
+</div>
+</div>
+<!-- ########################## realinfluencer end ########################## -->
+
+
+
+
+</div>
+</div>
+<!-- main end -->
+
+
+
+
+
+
+
+<!-- loder start -->
+<div id="pageLoder" class="pageLoder">
+    <div><i class="fa fa-spinner fa-spin"></i></div>
+</div>
+<!-- loder end -->
+
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.0/jquery-ui.min.js"></script> 
+<script src="//cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+
+<script>
+
+/* range slider form amount === start */
+$("#amountRange").slider({
+    range: "min",
+    step: 500,
+    max: 100000,
+    min:500,
+    value: 0,
+    slide: function(e, ui) 
+    {
+      $("#amountValueRange").val(ui.value);
+      $('#amountRange em').hide();
+      var valdiv = "<b id='tooltipdata'><i class='fa fa-inr' aria-hidden='true'></i> "+ ui.value +"</b>";
+      $(".ui-slider-handle").html(valdiv);
+      var positionSlide = $('.ui-slider-handle').position().left;
+      var positionPercentage = (100 * positionSlide) / $(window).width();
+      if(positionPercentage > 75)
+      {
+        $("#tooltipdata").css('left', '-60px')
+      }
+      else if(positionPercentage < 25)
+      {
+         $("#tooltipdata").css('left', '1px')
+      }
+      else
+      {
+        $("#tooltipdata").css('left', '-25px')
+      }
+    } 
+  });
+/* range slider form amount ==== end */
+
+/* copy code === start */
+function copycode(elementid) 
+{
+    $(elementid).attr("contenteditable", true).on("focus", function() 
+	{
+        document.execCommand('selectAll', false, null)
+    }).focus();
+    document.execCommand("Copy");
+    $(elementid).removeAttr("contenteditable");
+    // alert("Code Copied ");
+}
+/* copy code === ens */
+
+/* stats tabs === start */
+$(".dp_statstabs ul li").click(function()
+{
+		var getname = $(this).attr('data-name');
+		$(".dp_statstabs ul li").removeClass('dp_statstabs_li_active');
+		$(this).addClass('dp_statstabs_li_active');
+		$(".dp_statstabs section").slideUp(300);
+		$(".dp_statstabs section[data-id='"+getname+"']").slideDown(300);
+
+		if(getname == 'WeeklyStats') {
+			$("#stats_weekly.stats_slider .slick-dots li").eq(0).trigger("click");
+		} else if(getname == 'DailyStats') {
+			$("#stats_daily.stats_slider .slick-dots li").eq(0).trigger("click");
+		} else {
+			// nothing
+		}  
+});
+/* stats tabs === end */
+
+/* stats slider === start */
+$('.stats_slider').not('.slick-initialized').slick(
+{
+	slidesToShow: 5,
+	slidesToScroll: 1,
+	autoplay: false,
+	dots: true,
+	arrows: false,
+	adaptiveHeight: false,
+	infinite: false,
+	centerMode: false,
+	initialSlide:0,
+	centerPadding: '0',
+	responsive:
+	[
+		{
+			breakpoint: 1024,
+			settings: { slidesToShow:4 }
+		},
+		{
+			breakpoint: 767,
+			settings: { slidesToShow: 3 }
+		},
+		{
+			breakpoint: 599,
+			settings: { slidesToShow: 2 }
+		}
+	]
+});
+/* stats slider === end */
+
+/* influencer FAQs === start */
+$(".influencerFAQs ul li").click(function()
+ {
+	 $(".influencerFAQs ul li").removeClass('faqactive');
+	 $(this).addClass('faqactive');
+ });
+ /* influencer FAQs === end */
+</script>
+</body>
+</html>
