@@ -21,7 +21,8 @@
 
 	<!-- back button start -->
 	<div class="top_button">
-		<i class="fa fa-arrow-left" aria-hidden="true"></i>
+		<img src="images/arrow_left_blue.png" alt="back" />
+		<!-- <i class="fa fa-arrow-left" aria-hidden="true"></i> -->
 	</div>
 	<!-- back button end -->
 
@@ -113,8 +114,8 @@
  
 	<!-- back button start -->
 	<div class="cr_back_btn" >
-		<!-- <img src="images/arrow_left_blue.png" alt="back"> -->
-		<i onclick="charityShowHide(0)" class="fa fa-arrow-left" aria-hidden="true"></i>
+		<img onclick="charityShowHide(0)" src="images/arrow_left_blue.png" alt="back" />
+		<!-- <i class="fa fa-arrow-left" aria-hidden="true"></i> -->
 		<span>Select Charity</span>
 	</div>
 	<!-- back button end -->
@@ -178,7 +179,8 @@
  
 	<!-- back button start -->
 	<div class="top_button" >
-		<i onclick="dashboardShowHide(0)" class="fa fa-times" aria-hidden="true"></i>
+		<img onclick="dashboardShowHide(0)" src="images/close.png" alt="close" />
+		<!-- <i onclick="dashboardShowHide(0)" class="fa fa-times" aria-hidden="true"></i> -->
 	</div>
 	<!-- back button end -->
 
@@ -374,7 +376,8 @@
  
 	<!-- back button start -->
 	<div class="top_button" >
-		<i onclick="keyhighlightShowHide(0)" class="fa fa-times" aria-hidden="true"></i>
+		<img onclick="keyhighlightShowHide(0)" src="images/close.png" alt="close" />
+		<!-- <i onclick="keyhighlightShowHide(0)" class="fa fa-times" aria-hidden="true"></i> -->
 	</div>
 	<!-- back button end -->
 
@@ -519,8 +522,11 @@
  
 	<!-- influencerPicture start -->
 	<div class="influencerPicture">
-		<span class="influencerBackBtn" onclick="influencerShowHide(0)"><i class="fa fa-times" aria-hidden="true"></i></span>
-		<img src="images/influencer-picture.png" alt="avtar" />
+		<span class="influencerBackBtn" onclick="influencerShowHide(0)">
+			<img src="images/close.png" alt="close" />
+			<!-- <i class="fa fa-times" aria-hidden="true"></i> -->
+		</span>
+		<img class="influenc_img" src="images/influencer-picture.png" alt="avtar" />
 	</div>
 	<!-- influencerPicture end -->
 
@@ -614,8 +620,11 @@
 
 		<!-- poster start -->
 		<div class="realinf_poster">
-			<span class="realinf_BackBtn" onclick="generatecodeShowHide(0)"><i class="fa fa-times" aria-hidden="true"></i></span>
-			<img src="images/happy-dance.png" alt="poster" />
+			<span class="realinf_BackBtn" onclick="generatecodeShowHide(0)">
+				<!-- <i class="fa fa-times" aria-hidden="true"></i> -->
+				<img src="images/close.png" alt="close" />
+			</span>
+			<img class="realinf_img" src="images/happy-dance.png" alt="poster" />
 		</div>
 		<!-- poster end -->
 
@@ -696,7 +705,6 @@ function restartJourney()
 	$("#dashboardMain").fadeOut(300);
 	$("#dashboardhighlights").fadeOut(300);
 	$("#generatedcodeSection").fadeOut(300);
-	// $("#mainDiv").css("overflow","visible");
 }
 	
 function dashboardShowHide(val)
@@ -734,13 +742,11 @@ function generatecodeShowHide(val)
 {
 	if(val == 0)
 	{
-		// $("#mainDiv").css("overflow","visible");
 		$("#generatedcodeSection").fadeOut(300);
 		$("#dashboardMain").fadeIn(300); 
 	}
 	else if(val == 1)
 	{
-		// $("#mainDiv").css("overflow","hidden");
 		$("#generatedcodeSection").css('display','flex');
 		$("#dashboardMain").fadeOut(300); 
 	}
