@@ -70,14 +70,14 @@ body {  background: #ccc; margin: 0; padding:0; box-sizing: border-box; line-hei
 .pg_field.pg_field_success:after { content:""; position: absolute; right: 15px;top: 40%;  background: url('../images/success.png') no-repeat center center; background-size: 100% 100%; width: 22px; height:21px; }
 .pg_field label { width: 100%;  margin:0 0 0.6rem 0;  float: left; text-align: left;  font-family: 'Rubik', sans-serif; font-weight: 500; font-size: 16px; color: #151522;  }
 .pg_field_input::placeholder { color: #c3c3c3; font-weight: 500;}
-.pg_field_input { width: 100%;  padding:0.9rem 1rem;  float: left; outline: none; text-align: left;  font-family: 'Rubik', sans-serif; font-weight:700; font-size: 16px; color: #043D45; background: #FFFFFF; border: 2px solid #043D45; border-radius: 5px; }
+.pg_field_input { width: 100%;  padding:0.9rem 3rem 0.9rem 1rem;  float: left; outline: none; text-align: left;  font-family: 'Rubik', sans-serif; font-weight:700; font-size: 16px; color: #043D45; background: #FFFFFF; border: 2px solid #043D45; border-radius: 5px; }
 .pg_field_msg { display: none; width: 100%; margin:0.4rem 0 0 0;  float: left; text-align: left;  font-family: 'Rubik', sans-serif; font-weight:500; font-size: 16px; color: #E80505;  }
 .pg_field.pg_field_error .pg_field_msg { display: block; color:#E80505; }
 .pg_field.pg_field_success .pg_field_msg { display: block; color:#1EAE35; }
 
 .pg_field_select { width: 100%;  padding:0.9rem 1rem; float: left; background: #FFFFFF; border: 2px solid #043D45; border-radius: 5px; }
 .pg_field_select aside { width: 100%; display: flex; justify-content: space-between; align-items: center; cursor: pointer; }
-.pg_field_select aside span { display: flex;justify-content: flex-start;align-items: center; text-align: left; }
+.pg_field_select aside span { display: flex;justify-content: flex-start;align-items: center; text-align: left; margin-right: 0.5rem; }
 .pg_field_select aside span em { display: inline-block; font-family: 'Rubik', sans-serif; font-weight:500; font-size: 16px; color: #c3c3c3; font-style: normal; }
 .pg_field_select aside span img { display:none; width:45px; margin-right: 10px; border: solid 1px #efefef; border-radius: 5px; }
 .pg_field_select aside span b { display: none; color:#043D45; font-family: 'Rubik', sans-serif; font-weight:500; font-size: 16px;  00 font-style: normal;  }
